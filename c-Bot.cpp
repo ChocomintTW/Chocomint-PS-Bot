@@ -9,6 +9,7 @@
 #include "header-src/calculator.h"
 #include "header-src/vector_Math.h"
 #define err setColor(color::red)
+#define func setColor(color::blue)
 #define reset setColor()
 #define many cout << err << "Too many parameters\n" \
 				  << reset
@@ -80,18 +81,16 @@ void welcome()
 	// while (getline(ifs, tmp))
 	// 	cout << tmp << "\n";
 	// ifs.close();
-	cout << "   ______   _\n"
-		 << "  / _____| | |                                             _\n"
-		 << " / /       | |                                            |_|             _\n"
-		 << " | |       | |____   ______   _____   ______   _________   _   ______   _| |_\n"
-		 << " | |       |  __  | |  __  | |  ___| |  __  | |  _   _  | | | |  __  | |_   _|\n"
-		 << " | |       | |  | | | |  | | | |     | |  | | | | | | | | | | | |  | |   | |\n"
-		 << " \\ \\_____  | |  | | | |__| | | |___  | |__| | | | | | | | | | | |  | |   | |\n"
-		 << "  \\______| |_|  |_| |______| |_____| |______| |_| |_| |_| |_| |_|  |_|   |_|\n"
+	cout << "   ____   _                                          _\n"
+			"  / ___| | |                                        (_)            _\n"
+			" | |     | |___   _____   ____   _____   _________   _   _____   _| |_\n"
+			" | |     |  _  | |  _  | |  __| |  _  | |  _   _  | | | |  _  | |_   _|\n"
+			" | |___  | | | | | |_| | | |__  | |_| | | | | | | | | | | | | |   | |\n"
+			"  \\____| |_| |_| |_____| |____| |_____| |_| |_| |_| |_| |_| |_|   |_|\n"
 		 << "\n"
-		 << "Develop by Chocomint\n"
-		 << "website: https://chocomint.cf\n"
-		 << "version 1.0\n"
+		 << "Chocomint's PS Bot\n"
+		 << "My website: https://chocomint.cf\n"
+		 << "version 1.2\n"
 		 << "\n";
 }
 
@@ -99,13 +98,15 @@ void help()
 {
 	cout << setColor(color::green) << "\n[Function List]\n\n"
 		 << reset
-		 << "base [b1] [b2] [value] | transfer value with b1 to b2   \n"
-		 << "calc [formula]         | calculate the formula          \n"
-		 << "to-char [int]          | transfer int to char with ASCII\n"
-		 << "to-int [char]          | transfer char to int with ASCII\n"
-		 << "vec-R [vector3D]       | transfer char to int with ASCII\n"
-		 << "cls                    | just like the origin command\n"
-		 << "exit                   | exit the plugin of powershell\n";
+		 << func << "base [b1] [b2] [value]      " << reset << "| Transfer value with b1 to b2   \n"
+		 << func << "calc [formula]              " << reset << "| Calculate the formula          \n"
+		 << func << "to-char [int]               " << reset << "| Transfer int to char with ASCII\n"
+		 << func << "to-int [char]               " << reset << "| Transfer char to int with ASCII\n"
+		 << func << "vec-R [vector3D]            " << reset << "| The length (magnitude) of a Vector3D\n"
+		 << func << "dot [vector3D] [vector3D]   " << reset << "| Dot product of two Vector3D\n"
+		 << func << "cross [vector3D] [vector3D] " << reset << "| Cross product of two Vector3D\n"
+		 << func << "cls                         " << reset << "| Just like the origin command\n"
+		 << func << "exit                        " << reset << "| Exit Chocomint's PS Bot\n";
 }
 
 int main()
