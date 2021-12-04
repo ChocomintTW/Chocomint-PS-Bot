@@ -74,14 +74,21 @@ inline bool isNumber(const string &str) { return str.find_first_not_of("01234567
 
 void welcome()
 {
-	ifstream ifs;
-	system("cd \"C:/Program Files (x86)/Chocomint/c-Bot\"");
-	ifs.open("/Chocomint.txt", ios::in);
-	string tmp;
-	while (getline(ifs, tmp))
-		cout << tmp << "\n";
-	ifs.close();
-	cout << "\n"
+	// ifstream ifs;
+	// ifs.open("/Chocomint.txt", ios::in);
+	// string tmp;
+	// while (getline(ifs, tmp))
+	// 	cout << tmp << "\n";
+	// ifs.close();
+	cout << "   ______   _\n"
+		 << "  / _____| | |                                             _\n"
+		 << " / /       | |                                            |_|             _\n"
+		 << " | |       | |____   ______   _____   ______   _________   _   ______   _| |_\n"
+		 << " | |       |  __  | |  __  | |  ___| |  __  | |  _   _  | | | |  __  | |_   _|\n"
+		 << " | |       | |  | | | |  | | | |     | |  | | | | | | | | | | | |  | |   | |\n"
+		 << " \\ \\_____  | |  | | | |__| | | |___  | |__| | | | | | | | | | | |  | |   | |\n"
+		 << "  \\______| |_|  |_| |______| |_____| |______| |_| |_| |_| |_| |_|  |_|   |_|\n"
+		 << "\n"
 		 << "Develop by Chocomint\n"
 		 << "website: https://chocomint.cf\n"
 		 << "version 1.0\n"
