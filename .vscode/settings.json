@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"vector": "cpp",
+		"stack": "cpp",
+		"xstring": "cpp",
+		"iostream": "cpp"
+	},
+	"cSpell.words": [
+		"incf"
+	]
+}
