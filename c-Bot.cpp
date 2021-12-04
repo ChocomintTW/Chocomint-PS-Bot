@@ -75,7 +75,8 @@ inline bool isNumber(const string &str) { return str.find_first_not_of("01234567
 void welcome()
 {
 	ifstream ifs;
-	ifs.open("C:/Users/user/Desktop/Chocomint/Program/powershell/Chocomint.txt", ios::in);
+	system("cd \"C:/Program Files (x86)/Chocomint/c-Bot\"");
+	ifs.open("/Chocomint.txt", ios::in);
 	string tmp;
 	while (getline(ifs, tmp))
 		cout << tmp << "\n";
