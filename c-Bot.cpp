@@ -81,16 +81,13 @@ void welcome()
 	// while (getline(ifs, tmp))
 	// 	cout << tmp << "\n";
 	// ifs.close();
-	cout << "   ____   _                                          _\n"
-			"  / ___| | |                                        (_)            _\n"
-			" | |     | |___   _____   ____   _____   _________   _   _____   _| |_\n"
-			" | |     |  _  | |  _  | |  __| |  _  | |  _   _  | | | |  _  | |_   _|\n"
-			" | |___  | | | | | |_| | | |__  | |_| | | | | | | | | | | | | |   | |\n"
-			"  \\____| |_| |_| |_____| |____| |_____| |_| |_| |_| |_| |_| |_|   |_|\n"
-		 << "\n"
-		 << "Chocomint's PS Bot\n"
-		 << "My website: https://chocomint.cf\n"
-		 << "version 1.2\n"
+	cout << "\n"
+		 << "                               |   ____   _                                          _\n"
+		 << " Chocomint's PS Bot            |  / ___| | |                                        (_)            _\n"
+		 << " Version 1.2                   | | |     | |___   _____   ____   _____   _________   _   _____   _| |_\n"
+		 << "                               | | |     |  _  | |  _  | |  __| |  _  | |  _   _  | | | |  _  | |_   _|\n"
+		 << " Website: https://chocomint.cf | | |___  | | | | | |_| | | |__  | |_| | | | | | | | | | | | | |   | |\n"
+		 << "                               |  \\____| |_| |_| |_____| |____| |_____| |_| |_| |_| |_| |_| |_|   |_|\n"
 		 << "\n";
 }
 
@@ -150,8 +147,7 @@ int main()
 				input.erase(input.begin());
 				stringEX tmp = Str_merge("", input);
 				tmp.replaceAll(" ", "");
-				cout << tmp << "\n";
-				cout << compute(infix_to_postfix(tmp)) << "\n";
+				cout << " = " << compute(infix_to_postfix(tmp)) << "\n";
 			}
 		}
 		else if (first == "to-char")

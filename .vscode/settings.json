@@ -3,7 +3,8 @@
 		"vector": "cpp",
 		"stack": "cpp",
 		"xstring": "cpp",
-		"iostream": "cpp"
+		"iostream": "cpp",
+		"complex": "cpp"
 	},
 	"cSpell.words": [
 		"incf"
