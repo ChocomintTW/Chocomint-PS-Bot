@@ -4,7 +4,9 @@
 		"stack": "cpp",
 		"xstring": "cpp",
 		"iostream": "cpp",
-		"complex": "cpp"
+		"complex": "cpp",
+		"string": "cpp",
+		"xutility": "cpp"
 	},
 	"cSpell.words": [
 		"incf"

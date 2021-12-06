@@ -82,13 +82,13 @@ void welcome()
 	// 	cout << tmp << "\n";
 	// ifs.close();
 	cout << "\n"
-		 << "                               |   ____   _                                          _\n"
-		 << " Chocomint's PS Bot            |  / ___| | |                                        (_)            _\n"
-		 << " Version 1.2.1                 | | |     | |___   _____   ____   _____   _________   _   _____   _| |_\n"
-		 << "                               | | |     |  _  | |  _  | |  __| |  _  | |  _   _  | | | |  _  | |_   _|\n"
-		 << " Website: https://chocomint.cf | | |___  | | | | | |_| | | |__  | |_| | | | | | | | | | | | | |   | |\n"
-		 << "                               |  \\____| |_| |_| |_____| |____| |_____| |_| |_| |_| |_| |_| |_|   |_|\n"
-		 << "\n";
+		 << reset << "                               " << reset << "|" << setColor(color::green) << "   ____   _                                          _\n"
+		 << setColor(color::aqua) << " Chocomint's PS Bot            " << reset << "|" << setColor(color::green) << "  / ___| | |                                        (_)            _\n"
+		 << setColor(color::aqua) << " Version 1.2.1                 " << reset << "|" << setColor(color::green) << " | |     | |___   _____   ____   _____   _________   _   _____   _| |_\n"
+		 << reset << "                               " << reset << "|" << setColor(color::green) << " | |     |  _  | |  _  | |  __| |  _  | |  _   _  | | | |  _  | |_   _|\n"
+		 << setColor(color::yellow) << " Website: https://chocomint.cf " << reset << "|" << setColor(color::green) << " | |___  | | | | | |_| | | |__  | |_| | | | | | | | | | | | | |   | |\n"
+		 << reset << "                               " << reset << "|" << setColor(color::green) << "  \\____| |_| |_| |_____| |____| |_____| |_| |_| |_| |_| |_| |_|   |_|\n"
+		 << reset << "\n";
 }
 
 void help()
