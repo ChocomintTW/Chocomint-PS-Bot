@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <cmath>
+#define here cout << "here!\n";
 using namespace std;
 
 string operators = "()[]{}+-*/^";
@@ -21,7 +22,7 @@ template <class T>
 ostream &operator<<(ostream &_os, stack<T> q)
 {
 	stack<T> tmp = q;
-	while (tmp.empty() != true)
+	while (!tmp.empty())
 	{
 		_os << tmp.top() << " ";
 		tmp.pop();
@@ -39,7 +40,7 @@ bool compare(char stack_o, char infix_o)
 
 stack<string> infix_to_postfix(string &infix)
 {
-	char past;
+	char past = '0';
 	stack<char> op;
 	stack<string> postfix;
 	for (auto i : infix)
@@ -100,6 +101,9 @@ stack<string> infix_to_postfix(string &infix)
 			break;
 
 		default:
+			if (postfix.empty())
+				postfix.push("\0");
+
 			if (!in(past, operators))
 				postfix.top() += i;
 			else

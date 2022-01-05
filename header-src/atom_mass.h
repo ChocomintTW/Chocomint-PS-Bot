@@ -23,58 +23,28 @@ namespace std
 	double mass(string &formula)
 	{
 		if (atoms.size() == 0)
-		{
 			throw "You didn't initialize the system";
-		}
-		stringEX tmp = formula;
-		double result_mass = 0;
-		int size = tmp.size();
+
+		stringEX f = formula;
+		int size = f.size();
 		for (int i = 0; i < size; i++)
 		{
-			cout << "tmp[" << i << "] = " << tmp[i] << "\n";
-			if (isBig(tmp[i]))
+			if (i == size - 1)
+				; // last
+			else
 			{
-				auto element = atoms[tmp.substr(i, 2)];
-				if (element)
-				{
-					if (i == size - 1)
-						result_mass += element;
-					else
-					{
-						int j;
-						for (j = i + 2; isNumber(tmp[j]); j++)
-							;
-						result_mass += element * ((j == i + 1) ? 1 : stoi(tmp.substr(i + 2, j)));
-						cout << element << " * " << stoi(tmp.substr(i + 2, j)) << "\n";
-						i += (j - 1);
-					}
-				}
-				else
-				{
-					auto element_single = atoms[tmp.substr(i, 1)];
-					if (element_single)
-					{
-						if (i == size - 1)
-							result_mass += element;
-						else
-						{
-							int j;
-							for (j = i + 1; isNumber(tmp[j]); j++)
-								;
-							result_mass += element_single * ((j == i + 1) ? 1 : stoi(tmp.substr(i + 1, j)));
-							cout << element << " * " << stoi(tmp.substr(i + 2, j)) << "\n";
-							i += j;
-						}
-					}
-					else
-					{
-						throw "No element symbol in the map";
-						return 0;
-					}
-				}
+				auto single_ = f.substr(i, 1), double_ = f.substr(i, 2);
+				double s = atoms[single_], d = atoms[double_];
+				bool is_double = (d ? true : false);
+
+				int cnt;
+				for (int j = i + is_double + 1; isNumber(f[j]); j++, cnt++)
+					;
+				f.substr(i, cnt - 1);
 			}
 		}
-		return result_mass;
+
+		return 0.0;
 	}
 }
 

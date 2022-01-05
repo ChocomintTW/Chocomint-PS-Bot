@@ -9,7 +9,6 @@
 #include "header-src/calculator.h"
 #include "header-src/vector_Math.h"
 #define err setColor(color::red)
-#define func setColor(color::blue)
 #define reset setColor()
 #define many cout << err << "Too many parameters\n" \
 				  << reset
@@ -93,17 +92,16 @@ void welcome()
 
 void help()
 {
-	cout << setColor(color::green) << "\n[Function List]\n\n"
-		 << reset
-		 << func << "base [b1] [b2] [value]      " << reset << "| Transfer value with b1 to b2   \n"
-		 << func << "calc [formula]              " << reset << "| Calculate the formula          \n"
-		 << func << "to-char [int]               " << reset << "| Transfer int to char with ASCII\n"
-		 << func << "to-int [char]               " << reset << "| Transfer char to int with ASCII\n"
-		 << func << "vec-R [vector3D]            " << reset << "| The length (magnitude) of a Vector3D\n"
-		 << func << "dot [vector3D] [vector3D]   " << reset << "| Dot product of two Vector3D\n"
-		 << func << "cross [vector3D] [vector3D] " << reset << "| Cross product of two Vector3D\n"
-		 << func << "cls                         " << reset << "| Just like the origin command\n"
-		 << func << "exit                        " << reset << "| Exit Chocomint's PS Bot\n";
+	cout << reset
+		 << "base [b1] [b2] [value]      | Transfer value with b1 to b2   \n"
+		 << "calc [formula]              | Calculate the formula          \n"
+		 << "to-char [int]               | Transfer int to char with ASCII\n"
+		 << "to-int [char]               | Transfer char to int with ASCII\n"
+		 << "vec-R [vector3D]            | The length (magnitude) of a Vector3D\n"
+		 << "dot [vector3D] [vector3D]   | Dot product of two Vector3D\n"
+		 << "cross [vector3D] [vector3D] | Cross product of two Vector3D\n"
+		 << "cls                         | Just like the origin command\n"
+		 << "exit                        | Exit Chocomint's PS Bot\n";
 }
 
 int main()
