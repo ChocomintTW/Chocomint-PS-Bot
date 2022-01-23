@@ -1,6 +1,8 @@
 ;The comment below contains SFX script commands
 
 Path=%ProgramFiles%/Chocomint/c-Bot
+Overwrite=1
+Update=U
 Title=Chocomint's PS Bot Downloader
 Text
 {
@@ -8,4 +10,7 @@ How to setup: https://github.com/ChocomintSSR/Chocomint-PS-Bot#readme
 
 
 My website: https://chocomint.cf
+
+
+Develope by Chocomint
 }

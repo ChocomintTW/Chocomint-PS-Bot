@@ -8,6 +8,8 @@
 #include "header-src/stringEX.h"
 using namespace std;
 
+#define ifyouusethisyourprogramwillbefasterthanbefore ios::sync_with_stdio(false), cin.tie(nullptr);
+
 complex<double> stoc(string &str)
 {
 	complex<double> result;
